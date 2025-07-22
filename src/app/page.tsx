@@ -2,14 +2,11 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-      <h1>Welcome to SamucaFlix</h1>
-      <Image
-        src='https://example.com/image.jpg'
-        alt='Description of image'
-        width={500}
-        height={300}
-      />
-    </main>
+    <div className='relative bg-gradient-to-b pb-8'>
+      <main className="relative p-8 pb-20 scrollbar-hide lg:px-16">
+        <h1 className="text-4xl font-bold">Welcome to SamucaFlix!</h1>
+        <p className="mt-4 text-lg">Your favorite movie</p>
+      </main>
+    </div>
   );
 }
