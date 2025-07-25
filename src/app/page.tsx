@@ -4,7 +4,7 @@ import { MovieRow } from './components/MovieRow';
 
 export default function Home() {
   return (
-    <div className='relative h-screen overflow-hidden bg-gradient-to-b lg:h-[140vh]'>
+    <div className='relative bg-gradient-to-b pb-8'>
       <Header />
       <main className='relative pb-24 pl-4 lg:pl-16'>
         <Banner />
