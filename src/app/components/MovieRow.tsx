@@ -26,7 +26,7 @@ const MovieCard = ({ index }: MovieCardProps) => {
 };
 
 export function MovieRow({ sectionTitle = "Featured" }: MovieRowProps) {
-  return <div className='flex-col space-y-4'>
+  return <div className='flex flex-col space-y-4'>
     <div className='flex'>
       <h2 className='-ml-2 inline-flex items-center text-2xl font-bold'>
         {sectionTitle}
