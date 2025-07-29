@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { InputField } from '../InputField';
 
 export default function LoginForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -9,52 +10,44 @@ export default function LoginForm() {
   };
   return (
     <form
-          className='flex w-full max-w-md flex-col space-y-4 rounded bg-[#141414] px-4 py-8 shadow-lg opacity-90'
-          onSubmit={handleSubmit}
-        >
-          <div className='flex flex-col items-center space-y-4'>
-            <h1 className='text-3xl font-bold'>Login</h1>
-            <p className='text-sm text-gray-500'>
-              New to the app?{' '}
-              <a href='#' className='text-red-500 hover:underline'>
-                Register
-              </a>
-            </p>
-          </div>
-          <div className='mt-8 flex flex-col space-y-4'>
-            <div>
-              <label htmlFor='email' className='block mb-1 font-medium'>
-              Email
-              </label>
-              <input
-              type='email'
-              id='email'
-              name='email'
-              required
-              className='w-full rounded-lg border border-gray-600 bg-gray-800 px-4 py-2 text-white focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500'
-              autoComplete='email'
-              placeholder='Enter your email'
-              />
-            </div>
-            <div>
-              <label htmlFor='password'>Password</label>
-              <input
-                type='password'
-                id='password'
-                name='password'
-                required
-                className='w-full rounded-lg border border-gray-600 bg-gray-800 px-4 py-2 text-white focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500'
-                autoComplete='current-password'
-                placeholder='Enter your password'
-              />
-            </div>
-            <button
-              type='submit'
-              className='rounded bg-red-600 px-4 py-2 font-bold text-white hover:bg-red-700'
-            >
-              Login
-            </button>
-          </div>
-        </form>
+      className='flex w-full max-w-md flex-col space-y-4 rounded bg-[#141414] px-4 py-8 opacity-90 shadow-lg'
+      onSubmit={handleSubmit}
+    >
+      <div className='flex flex-col items-center space-y-4'>
+        <h1 className='text-3xl font-bold'>Login</h1>
+        <p className='text-sm text-gray-500'>
+          New to the app?{' '}
+          <a href='#' className='text-red-500 hover:underline'>
+            Register
+          </a>
+        </p>
+      </div>
+      <div className='mt-8 flex flex-col space-y-4'>
+        <InputField
+          label='Email'
+          type='email'
+          id='email'
+          placeholder='Enter your email'
+          required
+          autoComplete='email'
+        />
+
+        <InputField
+          label='Password'
+          type='password'
+          id='password'
+          placeholder='Enter your password'
+          required
+          autoComplete='current-password'
+        />
+      </div>
+
+      <button
+        type='submit'
+        className='rounded bg-red-600 px-4 py-2 font-bold text-white hover:bg-red-700'
+      >
+        Login
+      </button>
+    </form>
   );
 }
