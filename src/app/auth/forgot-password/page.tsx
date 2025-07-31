@@ -1,7 +1,5 @@
-import React from "react";
+import { ForgotPasswordForm } from './ForgotPasswordForm';
 
-export default function ForgotPasswordForm() {
-    return (
-        <div className="bg-black">Forgot Password</div>
-    );
+export default function ForgotPassword() {
+  return <ForgotPasswordForm />;
 }
