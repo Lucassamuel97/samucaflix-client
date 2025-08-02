@@ -17,7 +17,7 @@ export const defaultOptions: RequestOptions = {
 
 export function buildQueryString(params: ApiQueryParameters): string {
   const query = Object.entries(params)
-    .filter(([, value]) => value !== undefined)
+    .filter(([, value]) => value !== undefined && value !== '')
     .map(([key, value]) => [key, encodeURIComponent(String(value))]);
 
   return `?${new URLSearchParams(Object.fromEntries(query)).toString()}`;

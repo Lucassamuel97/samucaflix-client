@@ -24,12 +24,29 @@ export const searchMovies = async (
     _limit: 100,
   }
 ): Promise<Movies> => {
-  return apiRequest(
-    `movies`,
-    {
-      title_like: title,
-      genres_like: genre,
-    },
-    options
-  );
+  // Se não há critérios de busca, retorna array vazio
+  if ((!title || title.trim() === '') && (!genre || genre.trim() === '')) {
+    return [];
+  }
+  
+  const query: any = {};
+  
+  if (title && title.trim() !== '') {
+    query.title_like = title;
+  }
+  
+  if (genre && genre.trim() !== '') {
+    query.genres_like = genre;
+  }
+  
+  const movies = await apiRequest<Movies>(`movies`, query, options);
+  
+  // Filtro adicional no lado do cliente para garantir que a busca funcione
+  if (title && title.trim() !== '') {
+    return movies.filter((movie) => 
+      movie.title.toLowerCase().includes(title.toLowerCase())
+    );
+  }
+  
+  return movies;
 };
