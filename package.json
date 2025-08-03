@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@vidstack/react": "^1.12.13",
+    "maverick.js": "^0.43.2",
     "next": "15.4.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",

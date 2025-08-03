@@ -6,7 +6,7 @@ import {
   SpeakerWaveIcon,
   UserGroupIcon,
 } from '@heroicons/react/24/outline';
-import { Movie } from '../types /movie';
+import { Movie } from '../types/movie';
 import { MovieRating } from './MovieRating';
 
 export const MovieInfo = ({ movie }: { movie: Movie }) => (

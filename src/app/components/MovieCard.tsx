@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Movie } from '../types /movie';
+import { Movie } from '../types/movie';
 import { MovieInfo } from './MovieInfo';
 
 export const MovieCard = ({ movie }: { movie: Movie }) => (
