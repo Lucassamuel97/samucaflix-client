@@ -24,11 +24,11 @@ export function Banner({ movie }: { movie: Movie }) {
           />
         </div>
 
-        <h1 className='text-2xl font-bold md:text-4xl lg:text-7xl'>
+        <h1 className='text-2xl font-bold md:text-4xl lg:text-7xl text-white'>
           {movie.title}
         </h1>
 
-        <p className='max-w-xs text-xs text-shadow-md md:max-w-lg md:text-lg lg:max-w-2xl'>
+        <p className='max-w-xs text-xs text-shadow-md md:max-w-lg md:text-lg lg:max-w-2xl text-white'>
           {movie.description}
         </p>
       </div>

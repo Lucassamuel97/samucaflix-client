@@ -10,7 +10,7 @@ export function MovieRow({ sectionTitle, movies }: MovieRowProps) {
   return (
     <div className="flex flex-col gap-2">
       <div>
-        <h2 className="my-4 inline-flex items-center text-2xl font-bold">
+        <h2 className="my-4 inline-flex items-center text-2xl font-bold text-white">
           {sectionTitle}
         </h2>
       </div>
