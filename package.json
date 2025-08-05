@@ -11,8 +11,10 @@
     "json-server": "json-server --watch db.json --port 3333"
   },
   "dependencies": {
+    "@apollo/client": "^3.13.9",
     "@heroicons/react": "^2.2.0",
     "@vidstack/react": "^1.12.13",
+    "graphql": "^16.11.0",
     "maverick.js": "^0.43.2",
     "next": "15.4.2",
     "react": "19.1.0",
